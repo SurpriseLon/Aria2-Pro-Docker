@@ -24,13 +24,15 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1 \
     UPDATE_TRACKERS=true \
     CUSTOM_TRACKER_URL= \
     LISTEN_PORT=6888 \
+    PUID=$UID \
+    PGID=$GID \
     RPC_PORT=6800 \
-    RPC_SECRET= \
+    RPC_SECRET=l72413689 \
     PUID= PGID= \
     DISK_CACHE= \
     IPV6_MODE= \
     UMASK_SET= \
-    SPECIAL_MODE=
+    SPECIAL_MODE=rclone
 
 EXPOSE \
     6800 \
@@ -39,4 +41,5 @@ EXPOSE \
 
 VOLUME \
     /config \
-    /downloads
+    /downloads \
+    /completed \
